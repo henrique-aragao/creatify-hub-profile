@@ -1,1 +1,29 @@
 @charset "UTF-8";
+@import url(variables.css);
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+body{
+    background-color: var(--cor-fundo);
+}
+
+
+header{
+    background-color: var(--cor-fundo-branco);
+}
+
+footer{
+    background-color: var(--cor-fundo-rodape);
+}
