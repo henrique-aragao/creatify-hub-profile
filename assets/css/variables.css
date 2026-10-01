@@ -1,1 +1,14 @@
 @charset "UTF-8";
+
+:root{
+    --cor-primaria: #7C3AED;
+    --cor-secuncaria: #FACC15;
+
+    --cor-fundo:  #F3F4F6;
+    --cor-fundo-branco: #FFF;
+    --cor-fundo-verde: #2FA951;
+    --cor-fundo-rodape: #1A1E30;
+
+    --cortexto-escuro: #202755;
+    --cor-texto-clara: #7d7f92;
+}
