@@ -5,10 +5,27 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    outline: 1px solid re;
 }
 
 a{
     text-decoration: none;
+    user-select: none;
+    white-space: nowrap;
+    -webkit-tap-highlight-color: transparent;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+h1,h2{
+    font-family: var(--fonte-titulo);
+    color: var(--cor-texto-escuro);
 }
 
 ul{
@@ -17,13 +34,223 @@ ul{
 
 body{
     background-color: var(--cor-fundo);
+    font-family: var(--fonte-texto);
 }
 
+.logo-menu, .logo-rodape{
+    width: 100%;
+    max-width: 250px;
+}
 
+.logo-menu-txt, .logo-rodape-txt{
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.logo-menu-txt span, .logo-rodape-txt span{
+    color: var(--cor-primaria);
+}
+
+/* ========== Inicio do Menu da pagina ========== */
 header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100px;
+    width: 100%;
     background-color: var(--cor-fundo-branco);
+    box-shadow: 0px 2px 10px #00000018;
 }
 
-footer{
-    background-color: var(--cor-fundo-rodape);
+#container-menu{
+    width: 100%;
+    max-width: 1600px;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-flow: row wrap;
 }
+
+.logo-menu-txt {
+    color: var(--cor-texto-escuro);
+}
+
+.menu{
+    width: 100%;
+    max-width: 210px;
+    padding: 5px;
+}
+
+.menu ul{
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.menu a{
+    display: flex;
+    align-items: end;
+    gap: 6px;
+    cursor: pointer;
+    line-height: 1;
+    color: var(--cor-texto-clara);
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 5px;
+    border-bottom: 2px solid transparent;
+    transition: color .3s, border .3s;
+}
+
+.menu a:hover{
+    color: var(--cor-primaria);
+    border-bottom: 2px solid var(--cor-primaria);
+}
+
+.menu a:hover .img-hover{
+    display: block;
+}
+
+.menu a:hover .img-menu{
+    display: none;
+}
+
+.img-hover{
+    display: none;
+}
+
+.menu img{
+    max-width: 20px;
+}
+
+a.ativ{
+    color: var(--cor-primaria);
+    border-bottom: 2px solid var(--cor-primaria);
+}
+
+a.ativ .img-hover{
+    display: block;
+}
+
+a.ativ .img-menu{
+    display: none;
+}
+/* ========== Fim do Menu da pagina ========== */
+
+
+/* ========== Inicio da pagina perfil ========== */
+#container-perfil{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-flow: row wrap;
+    margin: 20px auto;
+    gap: 30px;
+    width: 100%;
+    max-width: 1600px;
+    padding: 10px;
+}
+
+.perfil{
+    background-color: var(--cor-fundo-branco);
+    box-shadow: 0px 0px 10px #00000018;
+    border-radius: 14px;
+    flex: 1;
+}
+
+.informacoes-perfil{
+    padding: 20px;
+}
+
+.redes a{
+    cursor: pointer;
+}
+
+.redes ul{
+    display: flex;
+    align-self: center;
+    gap: 20px;
+}
+
+.redes img{
+    max-width: 30px;
+}
+
+.redes a:hover .rede-hover{
+    display: block;
+}
+
+.redes a:hover .rede-img{
+    display: none;
+}
+
+.rede-hover{
+    display: none;
+}
+
+.conteudo{
+    flex: 2;
+}
+/* ========== Fim da pagina perfil ========== */
+
+
+/* ========== Inicio do Rodape da pagina ========== */
+footer{
+    width: 100%;
+    background-color: var(--cor-fundo-rodape);
+    min-height: 100px;
+    padding: 10px;
+    color: var(--cor-texto-rodape);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rodape{
+    width: 100%;
+    max-width: 1600px;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-flow: row wrap;
+    gap: 10px;
+}
+
+.logo-rodape-txt{
+    color: var(--cor-fundo-branco);
+}
+
+.redes-sociais{
+   padding: 8px;
+}
+
+.redes-sociais ul{
+    display: flex;
+    flex-flow: row wrap;
+    gap: 20px;
+}
+
+.redes-sociais img{
+    max-width: 30px;
+}
+
+.redes-sociais a{
+    display: block;
+    padding: 6px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color .4s, transform .4s;
+}
+
+.redes-sociais a:hover{
+    background-color: #ffffff1e;
+    transform: translateY(-3px);
+}
+
+.redes-sociais a:focus-visible{
+    outline: 2px solid var(--cor-fundo);
+    transform: translateY(-3px);
+}
+/* ========== Fim do Rodape da pagina ========== */
