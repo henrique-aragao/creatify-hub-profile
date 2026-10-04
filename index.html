@@ -33,50 +33,85 @@
 
     <main id="container-perfil">
         <section class="perfil">
-            <div></div>
+            <div class="imagem-de-fundo">
+                <img src="assets/img/fotografo-fundo.jpg" alt="">
+            </div>
+
             <div class="informacoes-perfil">
-                <p>Lucas Ferreira</p>
-                <p>Fotógrafo</p>
-                <p>Apaixonado por capturar momentos reais e transformar em histórias visuais. Fotografia é a minha forma de ver o mundo.</p>
-                <p><img src="assets/icons/localizacao.png" alt="">São Paulo, SP</p>
-                <p>Fotografia de natureza, urbana e retratos</p>
-                <p><img src="assets/icons/link.png" alt="">links</p>
-                <button>Seguir</button><button>Editar a Bio</button>
-                <div>
-                    <div>
-                        <p>1.2K</p>
+                <div class="info-perfil">
+                    <div class="foto-perfil"></div>
+
+                    <h1 class="nome-pf">
+                        <span id="nome">Henrique Lins</span>
+                        <img src="assets/icons/verificado.png" alt="">
+                    </h1>
+
+                    <p id="profissao">Fotógrafo</p>
+
+                    <p id="bio">Apaixonado por capturar momentos reais e transformar em histórias visuais. Fotografia é a minha forma de ver o mundo.</p>
+
+                    <p class="bio-global">
+                        <img src="assets/icons/localizacao.png" alt="" class="local-img">
+                        <span id="localizacao">São Paulo, SP</span>
+                    </p>
+
+                    <p class="bio-global">
+                        <span id="trabalhos-img"><img src="assets/icons/camera.png" alt="" class="traba-img"></span>
+                        <span id="trabalhos">Fotografia de natureza, urbana e retratos</span>
+                    </p>
+
+                    <p class="bio-global">
+                        <img src="assets/icons/link.png" alt="" class="link-img">
+                        <a href="#!" id="link-projeto">henriquelins.com</a>
+                    </p>
+
+                    <div class="botoes-perfil">
+                        <button id="btn-seguir" onclick="seguir()">Seguir</button>
+                        <button id="btn-bio">Editar a Bio</button>
+                    </div>
+                </div>
+
+                <div class="seguidor">
+                    <div class="info-segui">
+                        <p>1.254</p>
                         <span>Seguidores</span>
                     </div>
-                    <div>
-                        <p>48</p>
+
+                    <div class="divisoria"></div>
+
+                    <div class="info-segui">
+                        <p>6</p>
                         <span>Projetos</span>
                     </div>
-                    <div>
-                        <p>3.8K</p>
+
+                    <div class="divisoria"></div>
+
+                    <div class="info-segui">
+                        <p>3.848</p>
                         <span>Curtidas</span>
                     </div>
                 </div>
 
-                <nav aria-label="Redes sociais" class="redes">
-                    <h2>Links</h2>
+                <nav aria-labelledby="titulo-links" class="redes">
+                    <h2 id="titulo-links">Links</h2>
                     <ul>
                         <li><a href="#!">
-                            <img src="assets/icons/instagram.png" alt="" class="rede-img">
+                            <img src="assets/icons/instagram.png" alt="Acessar Instagram" class="rede-img">
                             <img src="assets/icons/instagram-hover.png" alt="" class="rede-hover">
                         </a></li>
 
                         <li><a href="#!">
-                            <img src="assets/icons/behance.png" alt="" class="rede-img">
+                            <img src="assets/icons/behance.png" alt="Acessar Behance" class="rede-img">
                             <img src="assets/icons/behance-hover.png" alt="" class="rede-hover">
                         </a></li>
 
                         <li><a href="#!">
-                            <img src="assets/icons/internet.png" alt="" class="rede-img">
+                            <img src="assets/icons/internet.png" alt="Acessar Site pessoal" class="rede-img">
                             <img src="assets/icons/internet-hover.png" alt="" class="rede-hover">
                         </a></li>
 
                         <li><a href="#!">
-                            <img src="assets/icons/youtube.png" alt="" class="rede-img">
+                            <img src="assets/icons/youtube.png" alt="Acessar YouTube" class="rede-img">
                             <img src="assets/icons/youtube-hover.png" alt="" class="rede-hover">
                         </a></li>
                     </ul>
@@ -85,55 +120,174 @@
         </section>
   
         <section class="conteudo">
-            <div>
-                <p>"A vida é feita de pequenos momentos que merecem ser eternizados."</p>
+            <div class="frase">
+                <pre class="frase-txt">
+                    "A vida é feita de
+                     pequenos momentos
+                     que merecem ser eternizados."
+                </pre>
+
+                <div class="frase-img">
+                    <img src="assets/img/fotografo-frase.jpg" alt="">
+                </div>
             </div>
 
-            <div>
-                <div>
+            <div class="seguidores">
+                <div class="visualizacao">
                     <div><img src="assets/icons/seguidores.png" alt=""></div>
                     <div>
-                        <p>1.2K</p>
+                        <p>1.254</p>
                         <span>Seguidores</span>
                     </div>
                 </div>
 
-                <div>
+                <div class="divisor"></div>
+
+                <div class="visualizacao">
                     <div><img src="assets/icons/projetos.png" alt=""></div>
                     <div>
-                        <p>48</p>
+                        <p>6</p>
                         <span>Projetos</span>
                     </div>
                 </div>
 
-                <div>
+                <div class="divisor"></div>
+
+                <div class="visualizacao">
                     <div><img src="assets/icons/curtidas.png" alt=""></div>
                     <div>
-                        <p>3.8K</p>
+                        <p>3.848</p>
                         <span>Curtidas</span>
                     </div>
                 </div>
             </div>
 
-            <div>
-                <h1>Projetos Recentes</h1>
-                <a href="#!">Ver mais →</a>
+            <div class="projeto">
+                <div class="projeto-titulo">
+                    <h2>Projetos Recentes</h2>
 
-                <div>
-                    <div>card 1</div>
-                    <div>card 2</div>
-                    <div>card 3</div>
-                    <div>card 4</div>
-                    <div>card 5</div>
-                    <div>card 6</div>
+                    <button id="btn-ver">Ver mais →</button>
+                </div>
+
+                <div class="cards">
+                    <article class="card">
+                        <div class="card-img">
+                            <img src="assets/img/fotografo-natureza-1.jpg" alt="Grandes montanhas cobertas de neve sob um céu azul limpo, com um vale glacial ao centro e árvores na base.">
+                        </div>
+
+                        <div class="card-txt">
+                            <h3>Montanhas do Sul</h3>
+
+                            <div class="curti-favorito">
+                                <div class="curtidas">
+                                    <button aria-label="Curtir post 1"><img src="assets/icons/gostei.png" alt=""></button>
+                                    <span>842</span>
+                                </div>
+                                <button aria-label="Salvar post 1 nos favoritos"><img src="assets/icons/salvar.png" alt=""></button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-img">
+                            <img src="assets/img/fotografo-urbano-2.jpg" alt="Vista noturna de uma cidade iluminada através de uma janela de escritório, mostrando pontes e o rastro de luz dos carros.">
+                        </div>
+
+                        <div class="card-txt">
+                            <h3>São Paulo em Movimento</h3>
+
+                            <div class="curti-favorito">
+                                <div class="curtidas">
+                                    <button aria-label="Curtir post 2"><img src="assets/icons/gostei.png" alt=""></button>
+                                    <span>621</span>
+                                </div>
+                                <button aria-label="Salvar post 2 nos favoritos"><img src="assets/icons/salvar.png" alt=""></button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div  class="card-img">
+                            <img src="assets/img/fotografo-retrato-1.jpg" alt="Silhueta de uma pessoa de costas observando o mar e o horizonte durante um pôr do sol alaranjado.">
+                        </div>
+
+                        <div class="card-txt">
+                            <h3>Luz e Sombra</h3>
+
+                            <div class="curti-favorito">
+                                <div class="curtidas">
+                                    <button aria-label="Curtir post 3"><img src="assets/icons/gostei.png" alt=""></button>
+                                    <span>503</span>
+                                </div>
+                                <button aria-label="Salvar post 3 nos favoritos"><img src="assets/icons/salvar.png" alt=""></button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-img">
+                            <img src="assets/img/fotografo-urbano-1.jpg" alt="Pessoa de costas caminhando pelo corredor central de um grande galpão abandonado com pilares pichados.">
+                        </div>
+
+                        <div class="card-txt">
+                            <h3>Novos Caminhos</h3>
+
+                            <div class="curti-favorito">
+                                <div class="curtidas">
+                                    <button aria-label="Curtir post 4"><img src="assets/icons/gostei.png" alt=""></button>
+                                    <span>700</span>
+                                </div>
+                                <button aria-label="Salvar post 4 nos favoritos"><img src="assets/icons/salvar.png" alt=""></button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-img">
+                            <img src="assets/img/fotografo-retrato-2.jpg" alt="Primeiro plano de um suricato olhando diretamente para a câmera contra um fundo de terra desfocado.">
+                        </div>
+
+                        <div class="card-txt">
+                            <h3>Luz Natural do Deserto</h3>
+
+                            <div class="curti-favorito">
+                                <div class="curtidas">
+                                    <button aria-label="Curtir post 5"><img src="assets/icons/gostei.png" alt=""></button>
+                                    <span>935</span>
+                                </div>
+                                <button aria-label="Salvar post 5 nos favoritos"><img src="assets/icons/salvar.png" alt=""></button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-img">
+                            <img src="assets/img/fotografo-natureza-2.jpg" alt="Extenso campo de lavandas roxas organizadas em fileiras sob a luz forte do pôr do sol.">
+                        </div>
+
+                        <div class="card-txt">
+                            <h3>Campo de Flores</h3>
+
+                            <div class="curti-favorito">
+                                <div class="curtidas">
+                                    <button aria-label="Curtir post 6"><img src="assets/icons/gostei.png" alt=""></button>
+                                    <span>247</span>
+                                </div>
+                                <button aria-label="Salvar post 6 nos favoritos"><img src="assets/icons/salvar.png" alt=""></button>
+                            </div>
+                        </div>
+                    </article>
                 </div>
             </div>
 
-            <div>
+            <div class="editar-bio">
                 <h2><img src="assets/icons/editar.png" alt="">Editar Bio</h2>
                 <textarea name="" id=""></textarea>
-                <button>Cancelar</button><button>Salvar</button>
-            </div>
+
+                <div>
+                    <button>Cancelar</button>
+                    <button>Salvar</button></div>
+                </div>
         </section>
 
     </main>
@@ -151,10 +305,10 @@
 
             <nav aria-label="Redes sociais" class="redes-sociais">
                 <ul>
-                    <li><a href="#!"><img src="assets/icons/instagram-branco.png" alt="Instagram"></a></li>
-                    <li><a href="#!"><img src="assets/icons/behance-branco.png" alt="Behance"></a></li>
-                    <li><a href="#!"><img src="assets/icons/internet-branco.png" alt="Site pessoal"></a></li>
-                    <li><a href="#!"><img src="assets/icons/youtube-branco.png" alt="YouTube"></a></li>
+                    <li><a href="#!"><img src="assets/icons/instagram-branco.png" alt="Acessar Instagram"></a></li>
+                    <li><a href="#!"><img src="assets/icons/behance-branco.png" alt="Acessar Behance"></a></li>
+                    <li><a href="#!"><img src="assets/icons/internet-branco.png" alt="Acessar Site pessoal"></a></li>
+                    <li><a href="#!"><img src="assets/icons/youtube-branco.png" alt="Acessar YouTube"></a></li>
                 </ul>
             </nav>
 
