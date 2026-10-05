@@ -3,7 +3,8 @@
 
 :root{
     --cor-primaria: #7C3AED;
-    --cor-secuncaria: #FACC15;
+    --cor-primaria-hover: #5928ad;
+    --cor-secundaria: #FACC15;
 
     --cor-fundo:  #F3F4F6;
     --cor-fundo-branco: #FFF;
