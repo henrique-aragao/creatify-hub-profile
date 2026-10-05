@@ -212,16 +212,21 @@ a.ativ .img-menu{
 .foto-perfil{
     position: absolute;
     box-shadow: 5px 5px 10px #0000002f;
-    background-color: #f5f4ef;
+    background-color: #E9E2D6;
     border-radius: 50%;
-    width: 120px;
-    height: 120px;
+    width: 130px;
+    height: 130px;
     bottom:50%;
     top: 0;
     left: 20px;
     transform: translateY(-50%);
     border: 2px solid var(--cor-primaria);
     z-index: 1;
+}
+
+.foto-perfil img{
+    object-fit: cover;
+    border-radius: 50%;
 }
 
 .informacoes-perfil{
@@ -441,6 +446,136 @@ a.ativ .img-menu{
 
 .redes a:focus-visible .rede-hover {
     opacity: 1;
+}
+
+.popup{
+    width: 90%;
+    max-width: 450px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--cor-fundo);
+    border: none;
+    padding: 20px;
+    box-shadow: 0px 0px 10px #00000069;
+    border-radius: 20px;
+    z-index: 1;
+}
+
+.popup::backdrop{
+    background-color: #0000005e;
+}
+
+.popup h3{
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--cor-primaria);
+    margin-bottom: 20px;
+}
+
+.botao-fechar{
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1;
+    padding: 4px 6px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    color: var(--cor-primaria);
+    font-family: var(--fonte-texto);
+    border-radius: 5px;
+    border: none;
+    background-color: transparent;
+    transition: background-color .4s , color .4s;
+}
+
+.botao-fechar:hover{
+    background-color: var(--cor-primaria);
+    color: var(--cor-fundo-branco);
+}
+
+.form-bio{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    gap: 20px;
+    
+}
+
+.campo{
+    display: flex;
+    align-self: stretch;
+    flex-flow: column nowrap;
+    gap: 10px;
+    font-family: var(--fonte-titulo);
+}
+
+.campo label{
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--cor-texto-escuro);
+}
+
+#bio-nome, #site, #especifica {
+    font-size: 1.06rem;
+    font-weight: 400;
+    border: 2px solid var(--cor-primaria);
+    border-radius: 5px;
+    padding: 8px 5px;
+
+    font-family: var(--fonte-texto);
+    transition: border .4s, border-radius .4s, box-shadow .4s;
+}
+
+#bio-nome:focus, .campo textarea:focus, #site:focus, #especifica:focus{
+    border: 2px solid var(--cor-primaria-hover);
+    border-radius: 10px;
+    outline: none;
+    box-shadow: 0px 0px 10px #5928ad67;
+}
+
+.campo textarea{
+    border: 2px solid var(--cor-primaria);
+    border-radius: 5px;
+    padding: 10px;
+    resize: none;
+    height: 130px;
+    font-size: 1.06rem;
+    font-weight: 400;
+    transition: border .4s, border-radius .4s, box-shadow .4s;
+}
+
+.campo select{
+    font-size: 1.06rem;
+    font-weight: 500;
+    color: var(--cor-texto-escuro);
+    align-self: flex-start;
+    padding: 5px;
+    cursor: pointer;
+    border: 2px solid var(--cor-primaria);
+    border-radius: 5px;
+}
+
+.campo select:focus{
+    outline: none;
+    border: 2px solid var(--cor-primaria-hover);
+}
+
+#salvar{
+    display: block;
+    margin: 20px 5px 10px auto;
+    width: 80px;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    background-color: var(--cor-primaria);
+    color: var(--cor-fundo-branco);
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: var(--fonte-titulo);
+    cursor: pointer;
 }
 
 .conteudo{
