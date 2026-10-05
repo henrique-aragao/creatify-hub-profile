@@ -39,7 +39,9 @@
 
             <div class="informacoes-perfil">
                 <div class="info-perfil">
-                    <div class="foto-perfil"></div>
+                    <div class="foto-perfil">
+                        <img src="assets/img/avatar-fotografo.png" alt="">
+                    </div>
 
                     <h1 class="nome-pf">
                         <span id="nome">Henrique Lins</span>
@@ -67,13 +69,86 @@
 
                     <div class="botoes-perfil">
                         <button id="btn-seguir" onclick="seguir()">Seguir</button>
-                        <button id="btn-bio">Editar a Bio</button>
+                        <button id="btn-bio" onclick="abrirPopup()">Editar a Bio</button>
                     </div>
+
+                    <dialog id="bio-popup" class="popup">
+                        <button class="botao-fechar" onclick="fecharPopup()">X</button>
+                        <h3>Editar Bio</h3>
+                        <form action="" class="form-bio">
+                            <div class="campo">
+                                <label for="bio-nome">Nome de Usuario</label>
+                                <input type="text" name="nome" id="bio-nome" >
+                            </div>
+
+                            <div class="campo">
+                                <label for="profi">Profissão</label>
+                                <select name="profi" id="profi" >
+                                    <option value="" disabled selected>Escolher profissão</option>
+                                    <option value="Fotografo">Fotografo</option>
+                                    <option value="Fotografo">teste 1</option>
+                                    <option value="Fotografo">teste 2</option>
+                                </select>
+                            </div>
+
+                            <div class="campo">
+                                <label for="textoBio">Sua Biografia:</label>
+                                <textarea id="textoBio" name="biografia" rows="4" maxlength="160" placeholder="Conte um pouco sobre você... (máximo 200 caracteres)" ></textarea>
+                            </div>
+
+                            <div class="campo">
+                                <label for="estado">Escolha seu estado</label>
+                                <select id="estado" name="estado" >
+                                    <option value="" disabled selected>Escolha o seu estado...</option>
+                                    <option value="AC">Acre, AC</option>
+                                    <option value="AL">Alagoas, AL</option>
+                                    <option value="AP">Amapá, AP</option>
+                                    <option value="AM">Amazonas, AM</option>
+                                    <option value="BA">Bahia, BH</option>
+                                    <option value="CE">Ceará, CE</option>
+                                    <option value="DF">Distrito Federal, DF</option>
+                                    <option value="ES">Espírito Santo, ES</option>
+                                    <option value="GO">Goiás, GO</option>
+                                    <option value="MA">Maranhão, MA</option>
+                                    <option value="MT">Mato Grosso, MT</option>
+                                    <option value="MS">Mato Grosso do Sul, MS</option>
+                                    <option value="MG">Minas Gerais, MG</option>
+                                    <option value="PA">Pará, PA</option>
+                                    <option value="PB">Paraíba, PB</option>
+                                    <option value="PR">Paraná, PR</option>
+                                    <option value="PE">Pernambuco, PE</option>
+                                    <option value="PI">Piauí, PI</option>
+                                    <option value="RJ">Rio de Janeiro, RJ</option>
+                                    <option value="RN">Rio Grande do Norte, RN</option>
+                                    <option value="RS">Rio Grande do Sul, RS</option>
+                                    <option value="RO">Rondônia, RO</option>
+                                    <option value="RR">Roraima, RR</option>
+                                    <option value="SC">Santa Catarina, SC</option>
+                                    <option value="SP">São Paulo, SP</option>
+                                    <option value="SE">Sergipe, SE</option>
+                                    <option value="TO">Tocantins, TO</option>
+                                </select>
+                            </div>
+
+                            <div class="campo">
+                                <label for="especifica">Especificação do seu Trabalho</label>
+                                <input type="text" name="especifica" id="especifica"  placeholder="Ex: Fotografia de natureza, urbana e retratos" maxlength="100">
+                            </div>
+
+                            <div class="campo">
+                                <label for="site">Site</label>
+                                <input type="text" name="site" id="site"  placeholder="Ex: henriquelins.com">
+                            </div>
+
+                            
+                        </form>
+                        <button id="salvar" onclick="salvar()">Salvar</button>
+                    </dialog>
                 </div>
 
                 <div class="seguidor">
                     <div class="info-segui">
-                        <p>1.254</p>
+                        <p id="num-seguidores">1254</p>
                         <span>Seguidores</span>
                     </div>
 
