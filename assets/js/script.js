@@ -17,15 +17,26 @@ function seguir(){
   let seguindo = document.getElementById('btn-seguir');
   let seguidores = document.getElementById('num-seguidores');
   let segui = document.getElementById('segui');
+  let total = Number(seguidores.textContent);
   
   if(seguindo.textContent === 'Seguir'){
-    let total = Number(seguidores.textContent) + 1;
+    total = total + 1
     
     seguindo.textContent = 'Seguindo';
     seguidores.textContent = total
     segui.textContent = seguidores.textContent
+    setTimeout(() => {
+        seguindo.textContent = 'Deixar de seguir';
+    }, 500);
+
+  }else if(seguindo.textContent === 'Deixar de seguir'){
+    total = total - 1
+
+    seguindo.textContent = 'Seguir';
+    seguidores.textContent = total
+    segui.textContent = seguidores.textContent
   }
-}
+} 
 
 function salvar() {
   let nomePerfil = document.getElementById('nome');
@@ -238,10 +249,12 @@ function ilustrador(){
   planoFundo.src = 'assets/img/ilustra-fundo.jpg';
 
   // Foto do perfil
-
+  let fotoPerfil = document.getElementById('trocar-foto');
+  fotoPerfil.src = 'assets/img/avatar-ilustrador.png';
 
   //Cor de fundo do perfil
-
+  let fotoFundo = document.getElementById('fotos');
+  fotoFundo.style.backgroundColor = '#DAD1C4';
 
   // Nome do perfil
   let nome = document.getElementById('nome');
@@ -313,20 +326,39 @@ function ilustrador(){
 }
 
 function ver(){
-  let verCard = document.querySelectorAll('.invisivel')
-  let oculto = document.getElementById('btn-ver')
+  let verCard = document.querySelectorAll('.invisivel');
+  let oculto = document.getElementById('btn-ver');
 
   if(oculto.textContent === 'Ver mais →'){
     verCard.forEach(card => {
-      card.style.display = 'block'; // ou 'block', dependendo do seu layout
+      card.style.display = 'block';
     });
 
-    oculto.textContent = 'Ver menos'
+    oculto.textContent = '← Ver menos';
   }else {
     verCard.forEach(card => {
-      card.style.display = 'none'; // ou 'block', dependendo do seu layout
+      card.style.display = 'none';
     });
     
-    oculto.textContent = 'Ver mais →'
+    oculto.textContent = 'Ver mais →';
   }
+}
+
+
+const bio = document.getElementById('bio');
+const textarea = document.getElementById('trocar-bio');
+
+textarea.placeholder = bio.textContent.trim();
+
+function trocar(){
+  let bioAtual = document.getElementById('bio');
+  let mudarBio = document.getElementById('trocar-bio');
+
+  if (mudarBio.value.trim() === '') {
+    return;
+  }
+  
+  bioAtual.textContent = mudarBio.value;
+  mudarBio.placeholder = bioAtual.textContent;
+  mudarBio.value = '';
 }
