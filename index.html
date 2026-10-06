@@ -34,13 +34,13 @@
     <main id="container-perfil">
         <section class="perfil">
             <div class="imagem-de-fundo">
-                <img src="assets/img/fotografo-fundo.jpg" alt="">
+                <img src="assets/img/fotografo-fundo.jpg" alt="" id="plano-fundo">
             </div>
 
             <div class="informacoes-perfil">
                 <div class="info-perfil">
-                    <div class="foto-perfil">
-                        <img src="assets/img/avatar-fotografo.png" alt="">
+                    <div class="foto-perfil" id="fotos">
+                        <img src="assets/img/avatar-fotografo.png" alt="" id="trocar-foto">
                     </div>
 
                     <h1 class="nome-pf">
@@ -78,22 +78,22 @@
                         <form action="" class="form-bio">
                             <div class="campo">
                                 <label for="bio-nome">Nome de Usuario</label>
-                                <input type="text" name="nome" id="bio-nome" >
+                                <input type="text" name="nome" id="bio-nome">
                             </div>
 
                             <div class="campo">
                                 <label for="profi">Profissão</label>
                                 <select name="profi" id="profi" >
                                     <option value="" disabled selected>Escolher profissão</option>
-                                    <option value="Fotografo">Fotografo</option>
-                                    <option value="Fotografo">teste 1</option>
-                                    <option value="Fotografo">teste 2</option>
+                                    <option value="fotografo">Fotógrafo</option>
+                                    <option value="designer">Designer</option>
+                                    <option value="ilustrador">Ilustrador</option>
                                 </select>
                             </div>
 
                             <div class="campo">
                                 <label for="textoBio">Sua Biografia:</label>
-                                <textarea id="textoBio" name="biografia" rows="4" maxlength="160" placeholder="Conte um pouco sobre você... (máximo 200 caracteres)" ></textarea>
+                                <textarea id="textoBio" name="biografia" rows="4" maxlength="160" placeholder="Conte um pouco sobre você... (máximo 160 caracteres)" ></textarea>
                             </div>
 
                             <div class="campo">
@@ -137,10 +137,8 @@
 
                             <div class="campo">
                                 <label for="site">Site</label>
-                                <input type="text" name="site" id="site"  placeholder="Ex: henriquelins.com">
-                            </div>
-
-                            
+                                <input type="text" name="site" id="site" placeholder="Ex: henriquelins.com">
+                            </div>   
                         </form>
                         <button id="salvar" onclick="salvar()">Salvar</button>
                     </dialog>
@@ -196,14 +194,10 @@
   
         <section class="conteudo">
             <div class="frase">
-                <pre class="frase-txt">
-                    "A vida é feita de
-                     pequenos momentos
-                     que merecem ser eternizados."
-                </pre>
+                <pre class="frase-txt" id="frase-conteudo"></pre>
 
                 <div class="frase-img">
-                    <img src="assets/img/fotografo-frase.jpg" alt="">
+                    <img src="assets/img/fotografo-frase.jpg" alt="" id="img-frase">
                 </div>
             </div>
 
@@ -211,7 +205,7 @@
                 <div class="visualizacao">
                     <div><img src="assets/icons/seguidores.png" alt=""></div>
                     <div>
-                        <p>1.254</p>
+                        <p id="segui">1254</p>
                         <span>Seguidores</span>
                     </div>
                 </div>
@@ -241,17 +235,17 @@
                 <div class="projeto-titulo">
                     <h2>Projetos Recentes</h2>
 
-                    <button id="btn-ver">Ver mais →</button>
+                    <button id="btn-ver" onclick="ver()">Ver mais →</button>
                 </div>
 
                 <div class="cards">
                     <article class="card">
                         <div class="card-img">
-                            <img src="assets/img/fotografo-natureza-1.jpg" alt="Grandes montanhas cobertas de neve sob um céu azul limpo, com um vale glacial ao centro e árvores na base.">
+                            <img src="assets/img/fotografo-natureza-1.jpg" alt="Grandes montanhas cobertas de neve sob um céu azul limpo, com um vale glacial ao centro e árvores na base." id="card1">
                         </div>
 
                         <div class="card-txt">
-                            <h3>Montanhas do Sul</h3>
+                            <h3 id="titulo1">Montanhas do Sul</h3>
 
                             <div class="curti-favorito">
                                 <div class="curtidas">
@@ -265,11 +259,11 @@
 
                     <article class="card">
                         <div class="card-img">
-                            <img src="assets/img/fotografo-urbano-2.jpg" alt="Vista noturna de uma cidade iluminada através de uma janela de escritório, mostrando pontes e o rastro de luz dos carros.">
+                            <img src="assets/img/fotografo-urbano-2.jpg" alt="Vista noturna de uma cidade iluminada através de uma janela de escritório, mostrando pontes e o rastro de luz dos carros." id="card2">
                         </div>
 
                         <div class="card-txt">
-                            <h3>São Paulo em Movimento</h3>
+                            <h3 id="titulo2">São Paulo em Movimento</h3>
 
                             <div class="curti-favorito">
                                 <div class="curtidas">
@@ -283,11 +277,11 @@
 
                     <article class="card">
                         <div  class="card-img">
-                            <img src="assets/img/fotografo-retrato-1.jpg" alt="Silhueta de uma pessoa de costas observando o mar e o horizonte durante um pôr do sol alaranjado.">
+                            <img src="assets/img/fotografo-retrato-1.jpg" alt="Silhueta de uma pessoa de costas observando o mar e o horizonte durante um pôr do sol alaranjado." id="card3">
                         </div>
 
                         <div class="card-txt">
-                            <h3>Luz e Sombra</h3>
+                            <h3 id="titulo3">Luz e Sombra</h3>
 
                             <div class="curti-favorito">
                                 <div class="curtidas">
@@ -299,13 +293,13 @@
                         </div>
                     </article>
 
-                    <article class="card">
+                    <article class="card invisivel">
                         <div class="card-img">
-                            <img src="assets/img/fotografo-urbano-1.jpg" alt="Pessoa de costas caminhando pelo corredor central de um grande galpão abandonado com pilares pichados.">
+                            <img src="assets/img/fotografo-urbano-1.jpg" alt="Pessoa de costas caminhando pelo corredor central de um grande galpão abandonado com pilares pichados." id="card4">
                         </div>
 
                         <div class="card-txt">
-                            <h3>Novos Caminhos</h3>
+                            <h3 id="titulo4">Novos Caminhos</h3>
 
                             <div class="curti-favorito">
                                 <div class="curtidas">
@@ -317,13 +311,13 @@
                         </div>
                     </article>
 
-                    <article class="card">
+                    <article class="card invisivel">
                         <div class="card-img">
-                            <img src="assets/img/fotografo-retrato-2.jpg" alt="Primeiro plano de um suricato olhando diretamente para a câmera contra um fundo de terra desfocado.">
+                            <img src="assets/img/fotografo-retrato-2.jpg" alt="Primeiro plano de um suricato olhando diretamente para a câmera contra um fundo de terra desfocado." id="card5">
                         </div>
 
                         <div class="card-txt">
-                            <h3>Luz Natural do Deserto</h3>
+                            <h3 id="titulo5">Luz Natural do Deserto</h3>
 
                             <div class="curti-favorito">
                                 <div class="curtidas">
@@ -335,13 +329,13 @@
                         </div>
                     </article>
 
-                    <article class="card">
+                    <article class="card invisivel">
                         <div class="card-img">
-                            <img src="assets/img/fotografo-natureza-2.jpg" alt="Extenso campo de lavandas roxas organizadas em fileiras sob a luz forte do pôr do sol.">
+                            <img src="assets/img/fotografo-natureza-2.jpg" alt="Extenso campo de lavandas roxas organizadas em fileiras sob a luz forte do pôr do sol." id="card6">
                         </div>
 
                         <div class="card-txt">
-                            <h3>Campo de Flores</h3>
+                            <h3 id="titulo6">Campo de Flores</h3>
 
                             <div class="curti-favorito">
                                 <div class="curtidas">
