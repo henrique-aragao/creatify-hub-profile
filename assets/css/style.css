@@ -173,7 +173,6 @@ a.ativ .img-menu{
     display: none;
 }
 
-
 /* ========== Fim do Menu da pagina ========== */
 
 
@@ -270,6 +269,7 @@ a.ativ .img-menu{
     margin-bottom: 20px;
     font-weight: 500;
     color: var(--cor-texto-escuro);
+    overflow-wrap: anywhere;
 }
 
 .bio-global{
@@ -331,11 +331,17 @@ a.ativ .img-menu{
     white-space: nowrap;
     font-family: var(--fonte-titulo);
     cursor: pointer;
+    transition: transform .2s;
+}
+
+#btn-seguir:active, #btn-bio:active{
+    transform: translateY(5px) scale(.95);
 }
 
 #btn-seguir:focus-visible, #btn-bio:focus-visible{
     outline: 2px solid var(--cor-primaria);
     outline-offset: 6px;
+    transform: translateY(5px) scale(.95);
 }
 
 #btn-seguir{
@@ -786,6 +792,9 @@ a.ativ .img-menu{
 }
 
 .editar-bio{
+    width: 100%;
+    max-width: 500px;
+    align-self: flex-end;
     background-color: var(--cor-fundo-branco);
     box-shadow: 0px 0px 10px #00000018;
     border-radius: 10px;
@@ -806,11 +815,52 @@ a.ativ .img-menu{
 
 .editar-bio textarea{
     width: 100%;
-    max-width: 990px;
-    min-height: 120px;
+    height: 130px;
     margin-bottom: 20px;
+    resize: none;
+    font-size: 1.1rem;
+    font-family: var(--fonte-texto);
+    font-weight: 500;
+    padding: 5px;
+    line-height: 1.4;
+    border: 1px solid var(--cor-primaria);
+    border-radius: 8px;
+    transition: border .3s, border-radius .3s;
 }
 
+.editar-bio textarea:focus{
+    border: 1px solid var(--cor-primaria-hover);
+    outline: none;
+    border-radius: 12px;
+    box-shadow: 0px 0px 10px #5928ad67;
+}
+
+.botoes-bio{
+    display: flex;
+    justify-content: right;
+    gap: 20px;
+}
+
+.btn-biografia{
+    font-family: var(--fonte-titulo);
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    width: 100px;
+    padding: 8px;
+    border-radius: 10px;
+    border: none;
+}
+
+.btn-cancela{
+    background-color: #7c3aed25;
+    color: var(--cor-primaria);
+}
+
+.btn-salvar{
+    background-color: var(--cor-primaria);
+    color: var(--cor-fundo-branco);
+}
 /* ========== Fim da pagina perfil ========== */
 
 
