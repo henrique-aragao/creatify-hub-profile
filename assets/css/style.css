@@ -501,7 +501,6 @@ a.ativ .img-menu{
     flex-flow: column nowrap;
     align-items: flex-start;
     gap: 20px;
-    
 }
 
 .campo{
@@ -556,6 +555,7 @@ a.ativ .img-menu{
     cursor: pointer;
     border: 2px solid var(--cor-primaria);
     border-radius: 5px;
+    font-family: var(--fonte-texto);
 }
 
 .campo select:focus{
@@ -599,18 +599,20 @@ a.ativ .img-menu{
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     font-size: 1.3rem;
     font-family: var(--fonte-titulo);
     font-weight: 500;
     flex: 1;
+    min-height: 100px;
+    padding: 10px;
 }
 
 .frase-txt::before{
     position: absolute;
     content: "";
-    bottom: 10px;
-    right: 42%;
+    bottom: 5px;
+    right: 50%;
     width: 100px;
     height: 3px;
     transform: translate(-50%, -50%);
@@ -777,6 +779,10 @@ a.ativ .img-menu{
     color: #333232;
     font-size: 1.08rem;
     font-weight: 500;
+}
+
+.invisivel{
+    display: none;
 }
 
 .editar-bio{
