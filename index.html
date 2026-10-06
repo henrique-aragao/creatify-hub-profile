@@ -350,13 +350,16 @@
             </div>
 
             <div class="editar-bio">
-                <h2><img src="assets/icons/editar.png" alt="">Editar Bio</h2>
-                <textarea name="" id=""></textarea>
+                <h2 id="edt"><img src="assets/icons/editar.png" alt="">Editar Bio</h2>
+                <form action="">
+                    <textarea aria-labelledby="edt" id="trocar-bio" name="trocar-bio" rows="4" maxlength="160" placeholder=""></textarea>
 
-                <div>
-                    <button>Cancelar</button>
-                    <button>Salvar</button></div>
-                </div>
+                    <div class="botoes-bio">
+                        <button type="reset" class="btn-biografia btn-cancela">Cancelar</button>
+                        <button type="button" class="btn-biografia btn-salvar" onclick="trocar()">Salvar</button>
+                    </div>
+                </form>
+            </div>
         </section>
 
     </main>
