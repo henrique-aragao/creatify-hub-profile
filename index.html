@@ -93,7 +93,8 @@
 
                             <div class="campo">
                                 <label for="textoBio">Sua Biografia:</label>
-                                <textarea id="textoBio" name="biografia" rows="4" maxlength="160" placeholder="Conte um pouco sobre você... (máximo 160 caracteres)" ></textarea>
+                                <textarea id="textoBio" name="biografia" rows="4" maxlength="160" placeholder="Conte um pouco sobre você... (máximo 160 caracteres)"></textarea>
+                                <p class="cont"><span id="contador-popup">0</span>/160</p>
                             </div>
 
                             <div class="campo">
@@ -132,7 +133,7 @@
 
                             <div class="campo">
                                 <label for="especifica">Especificação do seu Trabalho</label>
-                                <input type="text" name="especifica" id="especifica"  placeholder="Ex: Fotografia de natureza, urbana e retratos" maxlength="100">
+                                <input type="text" name="especifica" id="especifica"  placeholder="Ex: Fotografia de natureza, urbana e retratos" maxlength="80">
                             </div>
 
                             <div class="campo">
@@ -353,6 +354,7 @@
                 <h2 id="edt"><img src="assets/icons/editar.png" alt="">Editar Bio</h2>
                 <form action="">
                     <textarea aria-labelledby="edt" id="trocar-bio" name="trocar-bio" rows="4" maxlength="160" placeholder=""></textarea>
+                    <p class="cont-princi"><span id="contador-principal">0</span>/160</p>
 
                     <div class="botoes-bio">
                         <button type="reset" class="btn-biografia btn-cancela">Cancelar</button>
