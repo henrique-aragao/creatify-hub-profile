@@ -1,8 +1,9 @@
 let fraseConteudo = document.getElementById('frase-conteudo')
- fraseConteudo.innerHTML = `"A vida é feita de pequenos
+ fraseConteudo.textContent = `"A vida é feita de pequenos
  momentos que merecem ser 
  eternizados."`
 
+ // Inicio do popup
 const popup = document.getElementById('bio-popup');
 
 function abrirPopup() {
@@ -12,7 +13,10 @@ function abrirPopup() {
 function fecharPopup() {
   popup.close();
 }
+// Fim do popup
 
+
+// Inicio da validação do seguidores
 function seguir(){
   let seguindo = document.getElementById('btn-seguir');
   let seguidores = document.getElementById('num-seguidores');
@@ -37,47 +41,76 @@ function seguir(){
     segui.textContent = seguidores.textContent
   }
 } 
+// Fim da validação do seguidores
 
+
+// Inicio da troca e validação dos temas de profissiões
+// inicio da validação
 function salvar() {
-  let nomePerfil = document.getElementById('nome');
-  let nomeBio = document.getElementById('bio-nome');
-  nomePerfil.textContent = nomeBio.value;
-
-  let profissaoPerfil = document.getElementById('profissao');
   let profissaoBio = document.getElementById('profi');
-  profissaoPerfil.textContent = profissaoBio.selectedOptions[0].textContent;
 
-  console.log(profissaoBio.value);
-
-  if(profissaoBio.value === 'fotografo'){
+  if (profissaoBio.value === 'fotografo') {
     fotografo();
 
-  } else if(profissaoBio.value === 'designer') {
+  } else if (profissaoBio.value === 'designer') {
     designer();
 
-  }else if(profissaoBio.value === 'ilustrador'){
+  } else if (profissaoBio.value === 'ilustrador') {
     ilustrador();
   }
 
-  let bioPerfil = document.getElementById('bio');
-  let bioEditar = document.getElementById('textoBio');
-  bioPerfil.textContent = bioEditar.value;
-
-  let estadoPerfil = document.getElementById('localizacao');
-  let estadoBio = document.getElementById('estado');
-  estadoPerfil.textContent = estadoBio.selectedOptions[0].textContent;
-
-  let trabalhoPerfil = document.getElementById('trabalhos');
-  let trabalhoBio = document.getElementById('especifica');
-  trabalhoPerfil.textContent = trabalhoBio.value;
-
-  let siteperfil = document.getElementById('link-projeto');
-  let siteBio = document.getElementById('site');
-  siteperfil.textContent = siteBio.value;
+  validar();
 
   return fecharPopup();
 }
 
+function validar() {
+  let nomePerfil = document.getElementById('nome');
+  let nomeBio = document.getElementById('bio-nome');
+
+  let bioPerfil = document.getElementById('bio');
+  let bioEditar = document.getElementById('textoBio');
+
+  let estadoPerfil = document.getElementById('localizacao');
+  let estadoBio = document.getElementById('estado');
+
+  let trabalhoPerfil = document.getElementById('trabalhos');
+  let trabalhoBio = document.getElementById('especifica');
+
+  let siteperfil = document.getElementById('link-projeto');
+  let siteBio = document.getElementById('site');
+
+  let profissaoPerfil = document.getElementById('profissao');
+  let profissaoBio = document.getElementById('profi');
+
+  if (nomeBio.value.trim() !== '') {
+    nomePerfil.textContent = nomeBio.value;
+  }
+
+  if (bioEditar.value.trim() !== '') {
+    bioPerfil.textContent = bioEditar.value;
+    atualizarPlaceholder();
+  }
+
+  if (estadoBio.value.trim() !== '') {
+    estadoPerfil.textContent = estadoBio.selectedOptions[0].textContent;
+  }
+
+  if (trabalhoBio.value.trim() !== '') {
+    trabalhoPerfil.textContent = trabalhoBio.value;
+  }
+
+  if (siteBio.value.trim() !== '') {
+    siteperfil.textContent = siteBio.value;
+  }
+
+  if (profissaoBio.value !== '') {
+    profissaoPerfil.textContent = profissaoBio.selectedOptions[0].textContent;
+  }
+}
+// Fim da validação
+
+// inicio dos temas das profissões
 function fotografo(){
   // Imagem de fundo
   let planoFundo = document.getElementById('plano-fundo');
@@ -122,43 +155,45 @@ function fotografo(){
  eternizados."`;
 
 
- // Imagem dos cards
- let card1 = document.getElementById('card1');
- card1.src = "assets/img/fotografo-natureza-1.jpg";
+  // Imagem dos cards
+  let card1 = document.getElementById('card1');
+  card1.src = "assets/img/fotografo-natureza-1.jpg";
 
- let card2 = document.getElementById('card2');
- card2.src = "assets/img/fotografo-urbano-2.jpg";
+  let card2 = document.getElementById('card2');
+  card2.src = "assets/img/fotografo-urbano-2.jpg";
 
- let card3 = document.getElementById('card3');
- card3.src = "assets/img/fotografo-retrato-1.jpg";
+  let card3 = document.getElementById('card3');
+  card3.src = "assets/img/fotografo-retrato-1.jpg";
 
- let card4 = document.getElementById('card4');
- card4.src = "assets/img/fotografo-urbano-1.jpg";
+  let card4 = document.getElementById('card4');
+  card4.src = "assets/img/fotografo-urbano-1.jpg";
 
- let card5 = document.getElementById('card5');
- card5.src = "assets/img/fotografo-retrato-2.jpg";
+  let card5 = document.getElementById('card5');
+  card5.src = "assets/img/fotografo-retrato-2.jpg";
 
- let card6 = document.getElementById('card6');
- card6.src = "assets/img/fotografo-natureza-2.jpg";
+  let card6 = document.getElementById('card6');
+  card6.src = "assets/img/fotografo-natureza-2.jpg";
 
- // Titulo dos cards
- let titulo1 = document.getElementById('titulo1');
- titulo1.textContent = 'Montanhas do Sul';
+  // Titulo dos cards
+  let titulo1 = document.getElementById('titulo1');
+  titulo1.textContent = 'Montanhas do Sul';
 
- let titulo2 = document.getElementById('titulo2');
- titulo2.textContent = 'São Paulo em Movimento';
+  let titulo2 = document.getElementById('titulo2');
+  titulo2.textContent = 'São Paulo em Movimento';
 
- let titulo3 = document.getElementById('titulo3');
- titulo3.textContent = 'Luz e Sombra';
+  let titulo3 = document.getElementById('titulo3');
+  titulo3.textContent = 'Luz e Sombra';
 
- let titulo4 = document.getElementById('titulo4');
- titulo4.textContent = 'Novos Caminhos';
+  let titulo4 = document.getElementById('titulo4');
+  titulo4.textContent = 'Novos Caminhos';
 
- let titulo5 = document.getElementById('titulo5');
- titulo5.textContent = 'Luz Natural do Deserto';
+  let titulo5 = document.getElementById('titulo5');
+  titulo5.textContent = 'Luz Natural do Deserto';
 
- let titulo6 = document.getElementById('titulo6');
- titulo6.textContent = 'Campo de Flores';
+  let titulo6 = document.getElementById('titulo6');
+  titulo6.textContent = 'Campo de Flores';
+
+  atualizarPlaceholder();
 }
 
 function designer(){
@@ -205,42 +240,44 @@ function designer(){
   encontram."`;
 
   // Imagem dos cards
- let card1 = document.getElementById('card1');
- card1.src = "assets/img/designer1.jpg";
+  let card1 = document.getElementById('card1');
+  card1.src = "assets/img/designer1.jpg";
 
- let card2 = document.getElementById('card2');
- card2.src = "assets/img/designer2.jpg";
+  let card2 = document.getElementById('card2');
+  card2.src = "assets/img/designer2.jpg";
 
- let card3 = document.getElementById('card3');
- card3.src = "assets/img/designer3.jpg";
+  let card3 = document.getElementById('card3');
+  card3.src = "assets/img/designer3.jpg";
 
- let card4 = document.getElementById('card4');
- card4.src = "assets/img/designer4.jpg";
+  let card4 = document.getElementById('card4');
+  card4.src = "assets/img/designer4.jpg";
 
- let card5 = document.getElementById('card5');
- card5.src = "assets/img/designer5.jpg";
+  let card5 = document.getElementById('card5');
+  card5.src = "assets/img/designer5.jpg";
 
- let card6 = document.getElementById('card6');
- card6.src = "assets/img/designer6.jpg";
+  let card6 = document.getElementById('card6');
+  card6.src = "assets/img/designer6.jpg";
 
- // Titulo dos cards
- let titulo1 = document.getElementById('titulo1');
- titulo1.textContent = 'Essência da Marca';
+  // Titulo dos cards
+  let titulo1 = document.getElementById('titulo1');
+  titulo1.textContent = 'Essência da Marca';
 
- let titulo2 = document.getElementById('titulo2');
- titulo2.textContent = 'Nova Identidade';
+  let titulo2 = document.getElementById('titulo2');
+  titulo2.textContent = 'Nova Identidade';
 
- let titulo3 = document.getElementById('titulo3');
- titulo3.textContent = 'Entre Páginas';
+  let titulo3 = document.getElementById('titulo3');
+  titulo3.textContent = 'Entre Páginas';
 
- let titulo4 = document.getElementById('titulo4');
- titulo4.textContent = 'Forma & Sabor';
+  let titulo4 = document.getElementById('titulo4');
+  titulo4.textContent = 'Forma & Sabor';
 
- let titulo5 = document.getElementById('titulo5');
- titulo5.textContent = 'Conexão Visual';
+  let titulo5 = document.getElementById('titulo5');
+  titulo5.textContent = 'Conexão Visual';
 
- let titulo6 = document.getElementById('titulo6');
- titulo6.textContent = 'Ideias em Destaque';
+  let titulo6 = document.getElementById('titulo6');
+  titulo6.textContent = 'Ideias em Destaque';
+
+  atualizarPlaceholder();
 }
 
 function ilustrador(){
@@ -287,44 +324,50 @@ function ilustrador(){
   cada ilustração cria um novo mundo."`;
 
   // Imagem dos cards
- let card1 = document.getElementById('card1');
- card1.src = "assets/img/ilustracao1.png";
+  let card1 = document.getElementById('card1');
+  card1.src = "assets/img/ilustracao1.png";
 
- let card2 = document.getElementById('card2');
- card2.src = "assets/img/ilustracao2.jpg";
+  let card2 = document.getElementById('card2');
+  card2.src = "assets/img/ilustracao2.jpg";
 
- let card3 = document.getElementById('card3');
- card3.src = "assets/img/ilustracao3.jpg";
+  let card3 = document.getElementById('card3');
+  card3.src = "assets/img/ilustracao3.jpg";
 
- let card4 = document.getElementById('card4');
- card4.src = "assets/img/ilustracao4.png";
+  let card4 = document.getElementById('card4');
+  card4.src = "assets/img/ilustracao4.png";
 
- let card5 = document.getElementById('card5');
- card5.src = "assets/img/ilustracao5.jpg";
+  let card5 = document.getElementById('card5');
+  card5.src = "assets/img/ilustracao5.jpg";
 
- let card6 = document.getElementById('card6');
- card6.src = "assets/img/ilustracao6.jpg";
+  let card6 = document.getElementById('card6');
+  card6.src = "assets/img/ilustracao6.jpg";
 
- // Titulo dos cards
- let titulo1 = document.getElementById('titulo1');
- titulo1.textContent = 'Entre Mundos';
+  // Titulo dos cards
+  let titulo1 = document.getElementById('titulo1');
+  titulo1.textContent = 'Entre Mundos';
 
- let titulo2 = document.getElementById('titulo2');
- titulo2.textContent = 'Palavras Ilustradas';
+  let titulo2 = document.getElementById('titulo2');
+  titulo2.textContent = 'Palavras Ilustradas';
 
- let titulo3 = document.getElementById('titulo3');
- titulo3.textContent = 'Cores da Imaginação';
+  let titulo3 = document.getElementById('titulo3');
+  titulo3.textContent = 'Cores da Imaginação';
 
- let titulo4 = document.getElementById('titulo4');
- titulo4.textContent = 'Pequenos Sonhos';
+  let titulo4 = document.getElementById('titulo4');
+  titulo4.textContent = 'Pequenos Sonhos';
 
- let titulo5 = document.getElementById('titulo5');
- titulo5.textContent = 'Uma História em Traços';
+  let titulo5 = document.getElementById('titulo5');
+  titulo5.textContent = 'Uma História em Traços';
 
- let titulo6 = document.getElementById('titulo6');
- titulo6.textContent = 'Além do Horizonte';
+  let titulo6 = document.getElementById('titulo6');
+  titulo6.textContent = 'Além do Horizonte';
+
+  atualizarPlaceholder();
 }
+// Fim dos temas das profissões
+// Fim da troca e validação dos temas de profissiões
 
+
+// Inicio da ocultação dos cards
 function ver(){
   let verCard = document.querySelectorAll('.invisivel');
   let oculto = document.getElementById('btn-ver');
@@ -343,12 +386,18 @@ function ver(){
     oculto.textContent = 'Ver mais →';
   }
 }
+// Fim da ocultação dos cards
 
 
-const bio = document.getElementById('bio');
-const textarea = document.getElementById('trocar-bio');
+// Inicio do contador e validação do placeholder do textarea
+function atualizarPlaceholder() {
+  let bio = document.getElementById('bio');
+  let textarea = document.getElementById('trocar-bio');
 
-textarea.placeholder = bio.textContent.trim();
+  textarea.placeholder = bio.textContent.trim();
+}
+
+atualizarPlaceholder();
 
 function trocar(){
   let bioAtual = document.getElementById('bio');
@@ -357,8 +406,29 @@ function trocar(){
   if (mudarBio.value.trim() === '') {
     return;
   }
-  
+
   bioAtual.textContent = mudarBio.value;
-  mudarBio.placeholder = bioAtual.textContent;
+
+  atualizarPlaceholder();
+
   mudarBio.value = '';
 }
+
+let textareaPrincipal = document.getElementById('trocar-bio');
+let contadorPrincipal = document.getElementById('contador-principal');
+
+textareaPrincipal.addEventListener('input', function() {
+
+  contadorPrincipal.textContent = textareaPrincipal.value.length;
+
+});
+
+let textareaPopup = document.getElementById('textoBio');
+let contadorPopup = document.getElementById('contador-popup');
+
+textareaPopup.addEventListener('input', function() {
+
+  contadorPopup.textContent = textareaPopup.value.length;
+
+});
+// Fim do contador e validação do placeholder do textarea
