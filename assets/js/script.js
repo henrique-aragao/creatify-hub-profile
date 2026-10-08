@@ -1,9 +1,9 @@
 let fraseConteudo = document.getElementById('frase-conteudo')
  fraseConteudo.textContent = `"A vida é feita de pequenos
  momentos que merecem ser 
- eternizados."`
+ eternizados."`;
 
- // Inicio do popup
+// Inicio do popup
 const popup = document.getElementById('bio-popup');
 
 function abrirPopup() {
@@ -21,14 +21,15 @@ function seguir(){
   let seguindo = document.getElementById('btn-seguir');
   let seguidores = document.getElementById('num-seguidores');
   let segui = document.getElementById('segui');
-  let total = Number(seguidores.textContent);
+  let total = Number(seguidores.textContent.replace('.', ''));
   
   if(seguindo.textContent === 'Seguir'){
     total = total + 1
     
     seguindo.textContent = 'Seguindo';
-    seguidores.textContent = total
+    seguidores.textContent = total.toLocaleString('pt-BR')
     segui.textContent = seguidores.textContent
+    
     setTimeout(() => {
         seguindo.textContent = 'Deixar de seguir';
     }, 500);
@@ -37,7 +38,7 @@ function seguir(){
     total = total - 1
 
     seguindo.textContent = 'Seguir';
-    seguidores.textContent = total
+    seguidores.textContent = total.toLocaleString('pt-BR')
     segui.textContent = seguidores.textContent
   }
 } 
@@ -79,6 +80,7 @@ function validar() {
 
   let siteperfil = document.getElementById('link-projeto');
   let siteBio = document.getElementById('site');
+  let siteUrl = document.getElementById('site-url');
 
   let profissaoPerfil = document.getElementById('profissao');
   let profissaoBio = document.getElementById('profi');
@@ -107,11 +109,19 @@ function validar() {
   if (profissaoBio.value !== '') {
     profissaoPerfil.textContent = profissaoBio.selectedOptions[0].textContent;
   }
+  
+  if (siteUrl.value.trim() !== '') {
+    siteperfil.href = siteUrl.value;
+  }
+
 }
 // Fim da validação
 
 // inicio dos temas das profissões
 function fotografo(){
+  let fraseTexto = document.querySelector('.frase-txt');
+  fraseTexto.classList.remove('mover');
+
   // Imagem de fundo
   let planoFundo = document.getElementById('plano-fundo');
   planoFundo.src = 'assets/img/fotografo-fundo.jpg';
@@ -139,6 +149,8 @@ function fotografo(){
   // Tipo de projetos feitos
   let trabalhos = document.getElementById('trabalhos');
   trabalhos.textContent = 'Fotografia de natureza, urbana e retratos';
+  let mudaIcone = document.getElementById('trabalhos-img')
+  mudaIcone.src = 'assets/icons/camera.png'
 
   // Link de site pessoal
   let linkProjeto = document.getElementById('link-projeto');
@@ -197,6 +209,9 @@ function fotografo(){
 }
 
 function designer(){
+  let fraseTexto = document.querySelector('.frase-txt');
+  fraseTexto.classList.remove('mover');
+
   // Imagem de fundo
   let planoFundo = document.getElementById('plano-fundo');
   planoFundo.src = 'assets/img/designer-fundo.jpg';
@@ -224,6 +239,8 @@ function designer(){
   // Tipo de projetos feitos
   let trabalhos = document.getElementById('trabalhos');
   trabalhos.textContent = 'Identidade visual, branding e design editorial';
+  let mudaIcone = document.getElementById('trabalhos-img')
+  mudaIcone.src = 'assets/icons/designer.png'
 
   // Link de site pessoal
   let linkProjeto = document.getElementById('link-projeto');
@@ -281,6 +298,9 @@ function designer(){
 }
 
 function ilustrador(){
+  let fraseTexto = document.querySelector('.frase-txt');
+  fraseTexto.classList.add('mover');
+  
   // Imagem de fundo
   let planoFundo = document.getElementById('plano-fundo');
   planoFundo.src = 'assets/img/ilustra-fundo.jpg';
@@ -308,6 +328,8 @@ function ilustrador(){
   // Tipo de projetos feitos
   let trabalhos = document.getElementById('trabalhos');
   trabalhos.textContent = 'Ilustração editorial, personagens e arte digital';
+  let mudaIcone = document.getElementById('trabalhos-img')
+  mudaIcone.src = 'assets/icons/ilustrador.png'
 
   // Link de site pessoal
   let linkProjeto = document.getElementById('link-projeto');
@@ -432,3 +454,55 @@ textareaPopup.addEventListener('input', function() {
 
 });
 // Fim do contador e validação do placeholder do textarea
+
+
+// Inicio das curtidas nos cards
+function curtidas(){
+  let botaoCurtir = document.querySelectorAll('.btn-curtir');
+  let iconeCurtir = document.querySelectorAll('.icone-curtir');
+  let contadorCurtidas = document.querySelectorAll('.contador-curtidas');
+  let totalGeral = document.querySelectorAll('.total-curtidas');
+  let alteracao;
+  
+
+  botaoCurtir.forEach((botao, indice) => {
+    botao.addEventListener('click', () => {
+      let totalCurtidas = Number(contadorCurtidas[indice].textContent)
+
+      if(iconeCurtir[indice].src.includes('gostei-ativo.png')){
+        iconeCurtir[indice].src = 'assets/icons/gostei.png';
+        totalCurtidas = totalCurtidas - 1;
+        alteracao = -1;
+      }else{
+        iconeCurtir[indice].src = 'assets/icons/gostei-ativo.png';
+        totalCurtidas = totalCurtidas + 1;
+        alteracao = 1;
+      }
+
+      contadorCurtidas[indice].textContent = totalCurtidas;
+
+      totalGeral.forEach(total => {
+        let valorGeral = Number(total.textContent.replace('.', ''));
+        valorGeral = valorGeral + alteracao;
+        total.textContent = valorGeral.toLocaleString('pt-BR');
+      });
+    });
+  });
+
+  let botaoSalvar = document.querySelectorAll('.btn-salvar');
+  let iconeSalvar = document.querySelectorAll('.icone-salvar');
+
+  botaoSalvar.forEach((botao, indice) => {
+    botao.addEventListener('click', () => {
+      
+      if(iconeSalvar[indice].src.includes('salvar-ativo.png')){
+        iconeSalvar[indice].src = 'assets/icons/salvar.png';
+      }else{
+        iconeSalvar[indice].src = 'assets/icons/salvar-ativo.png';
+      }
+    });
+  });
+}
+
+curtidas();
+// Fim das curtidas nos cards
