@@ -58,13 +58,13 @@
                     </p>
 
                     <p class="bio-global">
-                        <span id="trabalhos-img"><img src="assets/icons/camera.png" alt="" class="traba-img"></span>
+                        <span><img src="assets/icons/camera.png" alt="" class="traba-img" id="trabalhos-img"></span>
                         <span id="trabalhos">Fotografia de natureza, urbana e retratos</span>
                     </p>
 
                     <p class="bio-global">
                         <img src="assets/icons/link.png" alt="" class="link-img">
-                        <a href="#!" id="link-projeto">henriquelins.com</a>
+                        <a href="https://www.linkedin.com/in/henrique-lins-aragao/" target="_blank" rel="noopener noreferrer" id="link-projeto">henriquelins.com</a>
                     </p>
 
                     <div class="botoes-perfil">
@@ -78,7 +78,7 @@
                         <form action="" class="form-bio">
                             <div class="campo">
                                 <label for="bio-nome">Nome de Usuario</label>
-                                <input type="text" name="nome" id="bio-nome">
+                                <input type="text" name="nome" id="bio-nome" placeholder="Ex: Henrique lins" maxlength="25">
                             </div>
 
                             <div class="campo">
@@ -133,13 +133,18 @@
 
                             <div class="campo">
                                 <label for="especifica">Especificação do seu Trabalho</label>
-                                <input type="text" name="especifica" id="especifica"  placeholder="Ex: Fotografia de natureza, urbana e retratos" maxlength="80">
+                                <input type="text" name="especifica" id="especifica"  placeholder="Ex: Fotografia de natureza, urbana e retratos" maxlength="70">
                             </div>
 
                             <div class="campo">
                                 <label for="site">Site</label>
-                                <input type="text" name="site" id="site" placeholder="Ex: henriquelins.com">
-                            </div>   
+                                <input type="text" name="site" id="site" placeholder="Nome visual Ex: henriquelins.com">
+                            </div>
+
+                            <div class="campo">
+                                <label for="site-url">URL do Site</label>
+                                <input type="url" name="site-url" id="site-url" placeholder="Ex: https://henriquelins.com.br">
+                            </div>  
                         </form>
                         <button id="salvar" onclick="salvar()">Salvar</button>
                     </dialog>
@@ -147,7 +152,7 @@
 
                 <div class="seguidor">
                     <div class="info-segui">
-                        <p id="num-seguidores">1254</p>
+                        <p id="num-seguidores">1.254</p>
                         <span>Seguidores</span>
                     </div>
 
@@ -161,7 +166,7 @@
                     <div class="divisoria"></div>
 
                     <div class="info-segui">
-                        <p>3.848</p>
+                        <p class="total-curtidas">3.848</p>
                         <span>Curtidas</span>
                     </div>
                 </div>
@@ -206,7 +211,7 @@
                 <div class="visualizacao">
                     <div><img src="assets/icons/seguidores.png" alt=""></div>
                     <div>
-                        <p id="segui">1254</p>
+                        <p id="segui">1.254</p>
                         <span>Seguidores</span>
                     </div>
                 </div>
@@ -226,7 +231,7 @@
                 <div class="visualizacao">
                     <div><img src="assets/icons/curtidas.png" alt=""></div>
                     <div>
-                        <p>3.848</p>
+                        <p class="total-curtidas">3.848</p>
                         <span>Curtidas</span>
                     </div>
                 </div>
@@ -250,10 +255,11 @@
 
                             <div class="curti-favorito">
                                 <div class="curtidas">
-                                    <button aria-label="Curtir post 1"><img src="assets/icons/gostei.png" alt=""></button>
-                                    <span>842</span>
+                                    <button class="btn-curtir" aria-label="Curtir post 1"><img src="assets/icons/gostei.png" alt="" class="icone-curtir"></button>
+                                    <span class="contador-curtidas">842</span>
                                 </div>
-                                <button aria-label="Salvar post 1 nos favoritos"><img src="assets/icons/salvar.png" alt=""></button>
+                                
+                                <button class="btn-salvar" aria-label="Salvar post 1 nos favoritos"><img src="assets/icons/salvar.png" alt="" class="icone-salvar"></button>
                             </div>
                         </div>
                     </article>
@@ -268,10 +274,11 @@
 
                             <div class="curti-favorito">
                                 <div class="curtidas">
-                                    <button aria-label="Curtir post 2"><img src="assets/icons/gostei.png" alt=""></button>
-                                    <span>621</span>
+                                    <button class="btn-curtir" aria-label="Curtir post 2"><img src="assets/icons/gostei.png" alt="" class="icone-curtir"></button>
+                                    <span class="contador-curtidas">621</span>
                                 </div>
-                                <button aria-label="Salvar post 2 nos favoritos"><img src="assets/icons/salvar.png" alt=""></button>
+
+                                <button class="btn-salvar" aria-label="Salvar post 2 nos favoritos"><img src="assets/icons/salvar.png" alt="" class="icone-salvar"></button>
                             </div>
                         </div>
                     </article>
@@ -286,10 +293,11 @@
 
                             <div class="curti-favorito">
                                 <div class="curtidas">
-                                    <button aria-label="Curtir post 3"><img src="assets/icons/gostei.png" alt=""></button>
-                                    <span>503</span>
+                                    <button class="btn-curtir" aria-label="Curtir post 3"><img src="assets/icons/gostei.png" alt="" class="icone-curtir"></button>
+                                    <span class="contador-curtidas">503</span>
                                 </div>
-                                <button aria-label="Salvar post 3 nos favoritos"><img src="assets/icons/salvar.png" alt=""></button>
+
+                                <button class="btn-salvar" aria-label="Salvar post 3 nos favoritos"><img src="assets/icons/salvar.png" alt="" class="icone-salvar"></button>
                             </div>
                         </div>
                     </article>
@@ -304,10 +312,11 @@
 
                             <div class="curti-favorito">
                                 <div class="curtidas">
-                                    <button aria-label="Curtir post 4"><img src="assets/icons/gostei.png" alt=""></button>
-                                    <span>700</span>
+                                    <button class="btn-curtir" aria-label="Curtir post 4"><img src="assets/icons/gostei.png" alt="" class="icone-curtir"></button>
+                                    <span class="contador-curtidas">700</span>
                                 </div>
-                                <button aria-label="Salvar post 4 nos favoritos"><img src="assets/icons/salvar.png" alt=""></button>
+
+                                <button class="btn-salvar" aria-label="Salvar post 4 nos favoritos"><img src="assets/icons/salvar.png" alt="" class="icone-salvar"></button>
                             </div>
                         </div>
                     </article>
@@ -322,10 +331,11 @@
 
                             <div class="curti-favorito">
                                 <div class="curtidas">
-                                    <button aria-label="Curtir post 5"><img src="assets/icons/gostei.png" alt=""></button>
-                                    <span>935</span>
+                                    <button class="btn-curtir" aria-label="Curtir post 5"><img src="assets/icons/gostei.png" alt="" class="icone-curtir"></button>
+                                    <span class="contador-curtidas">935</span>
                                 </div>
-                                <button aria-label="Salvar post 5 nos favoritos"><img src="assets/icons/salvar.png" alt=""></button>
+
+                                <button class="btn-salvar" aria-label="Salvar post 5 nos favoritos"><img src="assets/icons/salvar.png" alt="" class="icone-salvar"></button>
                             </div>
                         </div>
                     </article>
@@ -340,10 +350,11 @@
 
                             <div class="curti-favorito">
                                 <div class="curtidas">
-                                    <button aria-label="Curtir post 6"><img src="assets/icons/gostei.png" alt=""></button>
-                                    <span>247</span>
+                                    <button class="btn-curtir" aria-label="Curtir post 6"><img src="assets/icons/gostei.png" alt="" class="icone-curtir"></button>
+                                    <span class="contador-curtidas">247</span>
                                 </div>
-                                <button aria-label="Salvar post 6 nos favoritos"><img src="assets/icons/salvar.png" alt=""></button>
+
+                                <button class="btn-salvar" aria-label="Salvar post 6 nos favoritos"><img src="assets/icons/salvar.png" alt="" class="icone-salvar"></button>
                             </div>
                         </div>
                     </article>
