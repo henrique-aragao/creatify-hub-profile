@@ -29,6 +29,9 @@ function seguir(){
     seguindo.textContent = 'Seguindo';
     seguidores.textContent = total.toLocaleString('pt-BR')
     segui.textContent = seguidores.textContent
+
+    localStorage.setItem('seguindo', 'true');
+    localStorage.setItem('seguidores', total);
     
     setTimeout(() => {
         seguindo.textContent = 'Deixar de seguir';
@@ -40,8 +43,31 @@ function seguir(){
     seguindo.textContent = 'Seguir';
     seguidores.textContent = total.toLocaleString('pt-BR')
     segui.textContent = seguidores.textContent
+
+    localStorage.setItem('seguindo', 'false');
+    localStorage.setItem('seguidores', total);
   }
 } 
+
+function verificarSeguindo(){
+  let seguindo = localStorage.getItem('seguindo');
+  let totalSalvo = localStorage.getItem('seguidores');
+
+  let botao = document.getElementById('btn-seguir');
+  let seguidores = document.getElementById('num-seguidores');
+  let segui = document.getElementById('segui');
+
+  if(seguindo === 'true'){
+    botao.textContent = 'Deixar de seguir';
+  }
+
+  if(totalSalvo !== null){
+    seguidores.textContent = Number(totalSalvo).toLocaleString('pt-BR');
+    segui.textContent = seguidores.textContent;
+  }
+}
+
+verificarSeguindo();
 // Fim da validação do seguidores
 
 
