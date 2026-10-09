@@ -1098,7 +1098,7 @@ img.curva{
     background-color: var(--cor-secundaria);
 }
 
-.card-profi button{
+.btn-perfil{
     align-self: flex-end;
     display: flex;
     align-items: center;
@@ -1106,14 +1106,14 @@ img.curva{
     margin: 20px 0 10px 0;
     color: var(--cor-fundo-branco);
     background-color: var(--cor-primaria);
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     cursor: pointer;
-    border: none;
+    padding: 2px;
 }
 
-.card-profi button > img{
+.btn-perfil img{
     max-width: 16px;
 }
 
