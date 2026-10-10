@@ -17,4 +17,19 @@
 
     --fonte-titulo: 'Montserrat', sans-serif;
     --fonte-texto: 'Inter', sans-serif;
+
+    /* Inicio do Tema escuro */
+    --cor-dark-primaria: #A78BFA;
+    --cor-dark-primaria-hover: #C4B5FD;
+    --cor-dark-secundaria: #FACC15;
+
+    --cor-dark-fundo: #161A2A;
+    --cor-dark-fundo-branco: #20263B;
+    --cor-dark-fundo-verde: #2FA951;
+    --cor-dark-fundo-rodape: #101321;
+
+    --cor-dark-texto-rodape: #F3F4F6;
+    --cor-dark-texto-escuro: #F3F4F6;
+    --cor-dark-texto-clara: #B8BED0;
+    /* Fim do Tema escuro */
 }
