@@ -1,6 +1,8 @@
 @charset "UTF-8";
 @import url('variables.css');
+@import url('dark.css');
 
+/* ========== Inicio do estilo global ========== */
 *{
     padding: 0;
     margin: 0;
@@ -70,6 +72,8 @@ html{
     border-radius: 10px;
     border: 3px solid var(--cor-fundo); 
 }
+/* ========== Fim do estilo global ========== */
+
 
 /* ========== Inicio do Menu da pagina ========== */
 header{
@@ -171,6 +175,62 @@ a.ativ .img-hover{
 a.ativ .img-menu{
     display: none;
 }
+
+#troca-tema{
+    cursor: pointer;
+    width: 70px;
+    height: 30px;
+    border: none;
+    background-color: #dbdbdb;
+    border-radius: 30px;
+    padding: 2px;
+}
+
+#tema-img{
+    display: block;
+    max-width: 20px;
+    position: absolute;
+    transition: opacity .3s ease-in-out;
+}
+
+#troca-tema:focus-visible{
+    outline: 2px solid var(--cor-primaria);
+    outline-offset: 5px;
+}
+
+.bolinha{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--cor-fundo-branco);
+    height: 26px;
+    width: 26px;
+    border-radius: 50%;
+    transition: transform .5s ease-in-out, background-color .3s ease-in;
+}
+
+.bolinha.deslizar{
+    background-color: var(--cor-dark-primaria);
+    transform: translateX(40px);
+}
+
+.tema-claro{
+    opacity: 1;
+}
+
+.tema-escuro{
+    opacity: 0;
+}
+
+.bolinha.deslizar .tema-claro{
+    opacity: 0;
+}
+
+.bolinha.deslizar .tema-escuro{
+    opacity: 1;
+}
+
 /* ========== Fim do Menu da pagina ========== */
 
 
@@ -832,7 +892,6 @@ a.ativ .img-menu{
 .editar-bio textarea{
     width: 100%;
     height: 130px;
-    
     resize: none;
     font-size: 1.1rem;
     font-family: var(--fonte-texto);
