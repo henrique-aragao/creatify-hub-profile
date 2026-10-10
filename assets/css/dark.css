@@ -1,0 +1,122 @@
+/* ========== Inicio do estilo global ========== */
+body.dark-theme {
+    background-color: var(--cor-dark-fundo);
+}
+
+body.dark-theme h1, body.dark-theme h2, body.dark-theme h3{
+    color: var(--cor-dark-texto-escuro);
+}
+
+body.dark-theme .logo-menu-txt span, body.dark-theme .logo-rodape-txt span{
+    color: var(--cor-dark-primaria);
+}
+/* ========== Fim do estilo global ========== */
+
+
+/* ========== Inicio do Menu da pagina ========== */
+body.dark-theme header{
+    background-color: var(--cor-dark-fundo-branco);
+}
+
+body.dark-theme .logo-menu-txt {
+    color: var(--cor-fundo-branco);
+}
+
+body.dark-theme .menu a{
+    color: var(--cor-dark-texto-clara);
+}
+
+body.dark-theme .menu a:hover{
+    color: var(--cor-dark-primaria);
+    border-color: var(--cor-dark-primaria);
+}
+
+body.dark-theme .menu a:focus-visible{
+    outline-color: var(--cor-dark-primaria);
+    color: var(--cor-dark-primaria);
+}
+
+body.dark-theme a.ativ{
+    color: var(--cor-dark-primaria);
+    border-color: var(--cor-dark-primaria);
+}
+
+body.dark-theme #troca-tema{
+    background-color: var(--cor-dark-fundo-rodape);
+}
+
+body.dark-theme #troca-tema:focus-visible{
+    outline-color: var(--cor-dark-primaria);
+}
+/* ========== Fim do Menu da pagina ========== */
+
+
+/* ========== Inicio da pagina perfil ========== */
+body.dark-theme .perfil{
+    background-color: var(--cor-dark-fundo-branco);
+}
+
+body.dark-theme .foto-perfil{
+    border-color: var(--cor-dark-primaria);
+}
+
+body.dark-theme #nome{
+    color: var(--cor-dark-texto-escuro);
+}
+
+body.dark-theme #profissao{
+    color: var(--cor-dark-primaria);
+}
+
+body.dark-theme #bio{
+    color: var(--cor-dark-texto-escuro);
+}
+
+body.dark-theme .bio-global {
+    color: var(--cor-dark-texto-clara);
+}
+
+body.dark-theme #link-projeto{
+    color: var(--cor-dark-texto-clara);
+}
+
+body.dark-theme #link-projeto:hover{
+    color: var(--cor-dark-primaria);
+}
+
+body.dark-theme #link-projeto:focus-visible {
+    outline-color: var(--cor-dark-primaria);
+    color: var(--cor-dark-primaria);
+}
+
+body.dark-theme #btn-seguir:focus-visible, body.dark-theme #btn-bio:focus-visible{
+    outline-color: var(--cor-dark-primaria);
+}
+
+
+
+body.dark-theme .seguidores, body.dark-theme .projeto, body.dark-theme .editar-bio{
+    background-color: var(--cor-dark-fundo-branco);
+}
+
+body.dark-theme .editar-bio textarea {
+    color: var(--cor-dark-texto-escuro);
+    background-color: var(--cor-dark-fundo-rodape);
+}
+/* ========== Fim da pagina perfil ========== */
+
+
+/* ========== Inico da pagina sobre ========== */
+/* ========== Fim da pagina sobre ========== */
+
+
+/* ========== Inicio do Rodape da pagina ========== */
+body.dark-theme footer{
+    background-color: var(--cor-dark-fundo-rodape);
+    color: var(--cor-dark-texto-rodape);
+}
+
+body.dark-theme .redes-sociais a:focus-visible{
+    outline-color: var(--cor-dark-texto-clara);
+}
+/* ========== Fim do Rodape da pagina ========== */
