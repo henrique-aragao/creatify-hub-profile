@@ -532,3 +532,16 @@ function curtidas(){
 
 curtidas();
 // Fim das curtidas nos cards
+
+function mudar(){
+  let bolinha = document.querySelector('.bolinha');
+  bolinha.classList.toggle('deslizar');
+
+  let body = document.body;
+  body.classList.toggle('dark-theme');
+
+
+  if(body.classList.contains('dark-theme')){
+
+  }
+}
