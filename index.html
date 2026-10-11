@@ -19,14 +19,24 @@
 
             <nav aria-label="Menu principal" class="menu">
                 <ul>
-                    <li><a href="index.html" class="ativ"><img src="assets/icons/home.png" alt="" class="img-menu"><img src="assets/icons/home-hover.png" alt="" class="img-hover">Perfil</a></li>
+                    <li>
+                        <a href="index.html" class="ativ">
+                            <img src="assets/icons/home.png" alt="" class="img-menu">
+                            <img src="assets/icons/home-hover.png" alt="" class="img-hover">Perfil
+                     </a>
+                    </li>
 
-                    <li><a href="pages/sobre.html" ><img src="assets/icons/sobre.png" alt="" class="img-menu"><img src="assets/icons/sobre-hover.png" alt="" class="img-hover">Sobre</a></li>
+                    <li>
+                        <a href="pages/sobre.html">
+                            <img src="assets/icons/sobre.png" alt="" class="img-menu">
+                            <img src="assets/icons/sobre-hover.png" alt="" class="img-hover">Sobre
+                        </a>
+                    </li>
                 </ul>
             </nav>
 
             <div>
-                <button id="troca-tema" onclick="mudar()">
+                <button id="troca-tema" aria-label="Modo escuro" onclick="mudar()">
                     <span class="bolinha">
                         <img src="assets/icons/tema-claro.png" alt="" id="tema-img" class="tema-claro">
                         <img src="assets/icons/tema-escuro.png" alt="" id="tema-img" class="tema-escuro">
@@ -180,22 +190,22 @@
                     <h2 id="titulo-links">Links</h2>
                     <ul>
                         <li><a href="#!">
-                            <img src="assets/icons/instagram.png" alt="Acessar Instagram" class="rede-img">
+                            <img id="instagram" src="assets/icons/instagram.png" alt="Acessar Instagram" class="rede-img">
                             <img src="assets/icons/instagram-hover.png" alt="" class="rede-hover">
                         </a></li>
 
                         <li><a href="#!">
-                            <img src="assets/icons/behance.png" alt="Acessar Behance" class="rede-img">
+                            <img id="behance" src="assets/icons/behance.png" alt="Acessar Behance" class="rede-img">
                             <img src="assets/icons/behance-hover.png" alt="" class="rede-hover">
                         </a></li>
 
                         <li><a href="#!">
-                            <img src="assets/icons/internet.png" alt="Acessar Site pessoal" class="rede-img">
+                            <img id="site-pessoal" src="assets/icons/internet.png" alt="Acessar Site pessoal" class="rede-img">
                             <img src="assets/icons/internet-hover.png" alt="" class="rede-hover">
                         </a></li>
 
                         <li><a href="#!">
-                            <img src="assets/icons/youtube.png" alt="Acessar YouTube" class="rede-img">
+                            <img id="youtube" src="assets/icons/youtube.png" alt="Acessar YouTube" class="rede-img">
                             <img src="assets/icons/youtube-hover.png" alt="" class="rede-hover">
                         </a></li>
                     </ul>
@@ -367,14 +377,14 @@
             </div>
 
             <div class="editar-bio">
-                <h2 id="edt"><img src="assets/icons/editar.png" alt="">Editar Bio</h2>
+                <h2 id="edt"><img src="assets/icons/editar.png" alt="" id="imagem-editar">Editar Bio</h2>
                 <form action="">
                     <textarea aria-labelledby="edt" id="trocar-bio" name="trocar-bio" rows="4" maxlength="160" placeholder=""></textarea>
                     <p class="cont-princi"><span id="contador-principal">0</span>/160</p>
 
                     <div class="botoes-bio">
                         <button type="reset" class="btn-biografia btn-cancela">Cancelar</button>
-                        <button type="button" class="btn-biografia btn-salvar" onclick="trocar()">Salvar</button>
+                        <button type="button" class="btn-biografia butn-salvar" onclick="trocar()">Salvar</button>
                     </div>
                 </form>
             </div>
@@ -408,6 +418,7 @@
         </section>
     </footer>
 
+    <script src="../assets/js/tema.js"></script>
     <script src="assets/js/script.js"></script>
     <script src="assets/js/sobre.js"></script>
 </body>
