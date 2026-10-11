@@ -24,11 +24,12 @@
     --cor-dark-secundaria: #FACC15;
 
     --cor-dark-fundo: #161A2A;
+    --cor-dark-fundo-popup: #1d2336;
     --cor-dark-fundo-branco: #20263B;
     --cor-dark-fundo-verde: #2FA951;
     --cor-dark-fundo-rodape: #101321;
 
-    --cor-dark-texto-rodape: #F3F4F6;
+    --cor-dark-texto-rodape: #e8eaec;
     --cor-dark-texto-escuro: #F3F4F6;
     --cor-dark-texto-clara: #B8BED0;
     /* Fim do Tema escuro */
