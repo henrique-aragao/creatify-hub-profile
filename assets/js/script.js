@@ -175,8 +175,7 @@ function fotografo(){
   // Tipo de projetos feitos
   let trabalhos = document.getElementById('trabalhos');
   trabalhos.textContent = 'Fotografia de natureza, urbana e retratos';
-  let mudaIcone = document.getElementById('trabalhos-img')
-  mudaIcone.src = 'assets/icons/camera.png'
+  atualizarIconeTrabalhos('fotografo');
 
   // Link de site pessoal
   let linkProjeto = document.getElementById('link-projeto');
@@ -265,8 +264,7 @@ function designer(){
   // Tipo de projetos feitos
   let trabalhos = document.getElementById('trabalhos');
   trabalhos.textContent = 'Identidade visual, branding e design editorial';
-  let mudaIcone = document.getElementById('trabalhos-img')
-  mudaIcone.src = 'assets/icons/designer.png'
+  atualizarIconeTrabalhos('designer');
 
   // Link de site pessoal
   let linkProjeto = document.getElementById('link-projeto');
@@ -354,8 +352,7 @@ function ilustrador(){
   // Tipo de projetos feitos
   let trabalhos = document.getElementById('trabalhos');
   trabalhos.textContent = 'Ilustração editorial, personagens e arte digital';
-  let mudaIcone = document.getElementById('trabalhos-img')
-  mudaIcone.src = 'assets/icons/ilustrador.png'
+  atualizarIconeTrabalhos('ilustrador');
 
   // Link de site pessoal
   let linkProjeto = document.getElementById('link-projeto');
@@ -412,6 +409,38 @@ function ilustrador(){
   atualizarPlaceholder();
 }
 // Fim dos temas das profissões
+
+function atualizarIconeTrabalhos(profissao) {
+    const icone = document.getElementById('trabalhos-img');
+
+    if (!icone) return;
+
+    const temaEscuro = document.body.classList.contains('dark-theme');
+
+    const icones = {
+        fotografo: {
+            claro: 'camera.png',
+            escuro: 'fotografo-dark.png'
+        },
+        designer: {
+            claro: 'designer.png',
+            escuro: 'designer-dark.png'
+        },
+        ilustrador: {
+            claro: 'ilustrador.png',
+            escuro: 'ilustrador-dark.png'
+        }
+    };
+
+    const tema = temaEscuro ? 'escuro' : 'claro';
+    const arquivo = icones[profissao][tema];
+
+    const caminho = location.pathname.includes('/pages/')
+        ? '../assets/icons/'
+        : 'assets/icons/';
+
+    icone.src = caminho + arquivo;
+}
 // Fim da troca e validação dos temas de profissiões
 
 
@@ -532,16 +561,3 @@ function curtidas(){
 
 curtidas();
 // Fim das curtidas nos cards
-
-function mudar(){
-  let bolinha = document.querySelector('.bolinha');
-  bolinha.classList.toggle('deslizar');
-
-  let body = document.body;
-  body.classList.toggle('dark-theme');
-
-
-  if(body.classList.contains('dark-theme')){
-
-  }
-}
