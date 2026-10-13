@@ -930,6 +930,11 @@ a.ativ .img-menu{
     border: none;
 }
 
+.btn-biografia:focus-visible{
+    outline: 2px solid var(--cor-primaria);
+    outline-offset: 4px;
+}
+
 .btn-cancela{
     background-color: #7c3aed25;
     color: var(--cor-primaria);
@@ -1077,7 +1082,6 @@ a.ativ .img-menu{
     width: 80px;
     height: 80px;
     border-radius: 50%;
-
 }
 
 .func-img img{
