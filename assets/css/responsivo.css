@@ -1,1 +1,119 @@
 @charset "UTF-8";
+
+/* Tablet */
+@media (max-width: 1032px) {
+    /* ========== Inicio do estilo global ========== */
+    .menu a, #troca-tema, #link-projeto, #btn-seguir, #btn-bio, .redes a, .botao-fechar, #salva, #btn-ver, .curti-favorito button, .btn-biografia{
+        cursor: none;
+    }
+    /* ========== Fim do estilo global ========== */
+
+
+    /* ========== Inicio da pagina perfil ========== */
+    #container-perfil{
+        flex-wrap: wrap;
+    }
+
+    .informacoes-perfil{
+        padding: 15px;
+    }
+
+    #btn-seguir, #btn-bio{
+        max-width: 250px;
+    }
+
+    .projeto{
+        padding: 15px;
+    }
+
+    .cards{
+        grid-template-columns: repeat(2,1fr);
+    }
+    /* ========== Fim da pagina perfil ========== */
+
+
+    /* ========== Inico da pagina sobre ========== */
+    .hero-txt{
+        flex: 1;
+    }
+
+    .hero-img{
+        margin: auto 0;
+        flex: 1;
+    }
+
+    .hero-img img{
+        max-width: 350px;
+    }
+
+    .cards-sobre{
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    .func {
+        flex: 1;
+    }
+
+    /* ========== Fim da pagina sobre ========== */
+    *{
+        outline: 1px solid re;
+    }
+
+    /* ========== Inicio do Rodape da pagina ========== */
+    .copy{
+        margin-top: 10px;
+        flex: 0 0 100%;
+    }
+    /* ========== Fim do Rodape da pagina ========== */
+}
+
+/* Celular */
+@media (max-width: 767px) {
+    /* ========== Inicio da pagina perfil ========== */
+    #container-perfil{
+        padding: 0;
+    }
+
+    .cards{
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .perfil{
+        width: 100%;
+    }
+
+    .frase-img, .seguidores{
+        display: none;
+    }
+    /* ========== Fim da pagina perfil ========== */
+
+
+    /* ========== Inico da pagina sobre ========== */
+    #container-sobre{
+        padding: 0;
+    }
+
+    .hero-sobre{
+        padding: 10px;
+    }
+
+    .hero-img{
+        display: none;
+    }
+
+    .info-sobre{
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+
+    .card-comu{
+        width: 100%;
+    }
+
+    .func-divisor{
+        display: none;
+    }
+    /* ========== Fim da pagina sobre ========== */
+}
