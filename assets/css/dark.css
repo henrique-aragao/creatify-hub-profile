@@ -65,6 +65,10 @@ body.dark-theme #troca-tema{
 body.dark-theme #troca-tema:focus-visible{
     outline-color: var(--cor-dark-primaria);
 }
+
+body.dark-theme #btn-menu{
+    background-color: var(--cor-primaria-hover);
+}
 /* ========== Fim do Menu da pagina ========== */
 
 
@@ -260,6 +264,10 @@ body.dark-theme .btn-cancela{
 
 body.dark-theme .butn-salvar{
     background-color: var(--cor-primaria-hover);
+}
+
+body.dark-theme .btn-biografia:focus-visible{
+    outline-color: var(--cor-dark-primaria);
 }
 /* ========== Fim da pagina perfil ========== */
 
