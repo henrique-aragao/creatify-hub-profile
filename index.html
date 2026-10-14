@@ -10,39 +10,44 @@
 <body>
     <header>
         <section id="container-menu">
-            <div class="logo-menu">
-                <div class="logo-menu-img">
-                </div>
-                <div class="logo-menu-txt">
-                    <p>Creatify <span>Hub</span></p>
+            <div class="logo">
+                <div class="logo-menu">
+                    <div class="logo-menu-img">
+                    </div>
+                    <div class="logo-menu-txt">
+                        <p>Creatify <span>Hub</span></p>
+                    </div>
                 </div>
             </div>
 
-            <nav aria-label="Menu principal" class="menu">
-                <ul>
-                    <li>
-                        <a href="index.html" class="ativ">
-                            <img src="assets/icons/home.png" alt="" class="img-menu">
-                            <img src="assets/icons/home-hover.png" alt="" class="img-hover">Perfil
-                     </a>
-                    </li>
+            <div class="bt-me"><button id="btn-menu" onclick="menu()">☰</button></div>
 
-                    <li>
-                        <a href="pages/sobre.html">
-                            <img src="assets/icons/sobre.png" alt="" class="img-menu">
-                            <img src="assets/icons/sobre-hover.png" alt="" class="img-hover">Sobre
-                        </a>
-                    </li>
-                </ul>
-            </nav>
+            <div class="reponsivo" id="menu-reponsivo">
+                <nav aria-label="Menu principal" class="menu">
+                    <ul>
+                        <li>
+                            <a href="index.html" class="ativ">
+                                <img src="assets/icons/home.png" alt="" class="img-menu">
+                                <img src="assets/icons/home-hover.png" alt="" class="img-hover">Perfil
+                         </a>
+                        </li>
+                        <li>
+                            <a href="pages/sobre.html">
+                                <img src="assets/icons/sobre.png" alt="" class="img-menu">
+                                <img src="assets/icons/sobre-hover.png" alt="" class="img-hover">Sobre
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
 
-            <div>
-                <button id="troca-tema" aria-label="Modo escuro" onclick="mudar()">
-                    <span class="bolinha">
-                        <img src="assets/icons/tema-claro.png" alt="" id="tema-img" class="tema-claro">
-                        <img src="assets/icons/tema-escuro.png" alt="" id="tema-img" class="tema-escuro">
-                    </span>
-                </button>
+                <div>
+                    <button id="troca-tema" aria-label="Modo escuro" onclick="mudar()">
+                        <span class="bolinha">
+                            <img src="assets/icons/tema-claro.png" alt="" id="tema-img" class="tema-claro">
+                            <img src="assets/icons/tema-escuro.png" alt="" id="tema-img" class="tema-escuro">
+                        </span>
+                    </button>
+                </div>
             </div>
         </section>
     </header>
