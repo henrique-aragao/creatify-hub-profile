@@ -561,3 +561,17 @@ function curtidas(){
 
 curtidas();
 // Fim das curtidas nos cards
+
+function menu(){
+    let botaoMenu = document.getElementById('btn-menu')
+    let pricipalMenu = document.getElementById('menu-reponsivo')
+
+    botaoMenu.classList.toggle('ativo')
+    pricipalMenu.classList.toggle('aberto')
+
+    if (botaoMenu.classList.contains('ativo')) {
+        botaoMenu.innerHTML = 'X'
+    } else{
+        botaoMenu.innerHTML = '☰'
+    }
+}
