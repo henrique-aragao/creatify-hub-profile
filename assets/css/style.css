@@ -94,10 +94,28 @@ header{
     align-items: center;
     justify-content: space-around;
     flex-flow: row wrap;
+    gap: 10px;
+}
+
+#btn-menu{
+    display: none;
 }
 
 .logo-menu-txt {
     color: var(--cor-texto-escuro);
+}
+
+.logo{
+    display: flex;
+    justify-content: space-around;
+    flex: 1;
+}
+
+.reponsivo{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex: 1;
 }
 
 .menu{
@@ -230,7 +248,6 @@ a.ativ .img-menu{
 .bolinha.deslizar .tema-escuro{
     opacity: 1;
 }
-
 /* ========== Fim do Menu da pagina ========== */
 
 
@@ -386,7 +403,7 @@ a.ativ .img-menu{
 #btn-seguir, #btn-bio{
     flex: 1;
     border: none;
-    padding: 12px;
+    padding: 12px 0;
     font-size: 1.1rem;
     font-weight: 500;
     border-radius: 50px;
