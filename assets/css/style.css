@@ -39,8 +39,11 @@ body{
 }
 
 .logo-menu, .logo-rodape{
+    display: flex;
+    align-items: center;
+    gap: 5px;
     width: 100%;
-    max-width: 250px;
+    max-width: 270px;
 }
 
 .logo-menu-txt, .logo-rodape-txt{
@@ -109,6 +112,25 @@ header{
     display: flex;
     justify-content: space-around;
     flex: 1;
+}
+
+
+.logo-menu{
+    position: relative;
+}
+
+.logo-menu-img img{
+    max-width: 50px;
+    transition: opacity .3s;
+}
+
+.logo-img1{
+    opacity: 1;
+}
+
+.logo-img2{
+    position: absolute;
+    opacity: 0;
 }
 
 .reponsivo{
@@ -1246,6 +1268,15 @@ footer{
     justify-content: space-around;
     flex-flow: row wrap;
     gap: 10px;
+}
+
+.logo-rodape{
+    display: flex;
+    align-items: center;
+}
+
+.logo-rodape-img img{
+    max-width: 50px;
 }
 
 .logo-rodape-txt{
