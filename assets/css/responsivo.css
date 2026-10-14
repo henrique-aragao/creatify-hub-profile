@@ -18,8 +18,12 @@
         padding: 15px;
     }
 
+    .botoes-perfil{
+        max-width: 100%;
+    }
+
     #btn-seguir, #btn-bio{
-        max-width: 250px;
+        max-width: 210px;
     }
 
     .projeto{
@@ -57,9 +61,6 @@
     }
 
     /* ========== Fim da pagina sobre ========== */
-    *{
-        outline: 1px solid re;
-    }
 
     /* ========== Inicio do Rodape da pagina ========== */
     .copy{
@@ -71,6 +72,70 @@
 
 /* Celular */
 @media (max-width: 767px) {
+    /* ========== Inicio do Menu da pagina ========== */
+    #container-menu{
+        padding: 10px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .logo{
+        flex: 2;
+        justify-content: left;
+    }
+
+    .bt-me{
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+    }
+
+    .menu ul{
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    a.ativ{
+        color: var(--cor-primaria);
+        border-bottom: 2px solid var(--cor-primaria);
+    }
+
+    #btn-menu{
+        display: block;
+        margin-left: auto;
+        width: 35px;
+        height: 35px;
+        line-height: 1;
+        font-size: 1.3rem;
+        font-weight: 500;
+        background-color: var(--cor-primaria);
+        color: var(--cor-fundo-branco);
+        border-radius: 10px;
+        border: none;
+    }
+
+    #btn-menu.ativo{
+        background-color: var(--cor-primaria-hover);
+    }
+
+    .reponsivo{
+        display: none;
+    }
+
+    .reponsivo.aberto{
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 20px;
+        flex: 0 0 100%;
+        width: 100%;
+        max-width: 100%;
+        padding-bottom: 10px;
+    }
+
+    /* ========== Fim do Menu da pagina ========== */
+
+
     /* ========== Inicio da pagina perfil ========== */
     #container-perfil{
         padding: 0;
@@ -78,6 +143,31 @@
 
     .cards{
         grid-template-columns: repeat(1,1fr);
+    }
+
+    .projeto-titulo{
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .frase-txt{
+        font-size: 1.1rem;
+    }
+
+    .frase-txt::before{
+        right: 45%;
+    }
+
+    .frase-txt.mover::before{
+        right: 53%;
+    }
+
+    #btn-ver{
+        width: 100%;
+        max-width: 110px;
+        text-align: left;
+        white-space: nowrap;
+        padding: 8px 0;
     }
 
     .perfil{
