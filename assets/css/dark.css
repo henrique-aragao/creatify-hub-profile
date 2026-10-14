@@ -35,6 +35,16 @@ body.dark-theme header{
     background-color: var(--cor-dark-fundo-branco);
 }
 
+body.dark-theme .logo-img1{
+    position: absolute;
+    opacity: 0;
+}
+
+body.dark-theme .logo-img2{
+    position: relative;
+    opacity: 1;
+}
+
 body.dark-theme .logo-menu-txt {
     color: var(--cor-fundo-branco);
 }
