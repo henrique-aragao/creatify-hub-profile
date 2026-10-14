@@ -53,7 +53,7 @@ function aplicarTema(tema) {
         ['youtube', 'youtube.png', 'youtube-branco.png'],
         ['local-img', 'localizacao.png', 'localizacao-dark.png'],
         ['link-img', 'link.png', 'link-dark.png'],
-        ['imagem-editar', 'edit.png', 'edit-dark.png']
+        ['imagem-editar', 'editar.png', 'edit-dark.png']
     ];
 
     icones.forEach(([seletor, claro, escuroIcone]) => {
